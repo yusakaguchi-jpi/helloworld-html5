@@ -1,15 +1,15 @@
 # My helloworld-html5 quickstart
 
-# どこか適当なディレクトリに移動しておき、helloworld-html5のみをコピーする
-$ cp -r $QUICKSTART_HOME/helloworld-html5 .
-# 親ディレクトリにあるpom.xmlも必要になるので別名にしてコピーしておく
-$ cp $QUICKSTART_HOME/pom.xml helloworld-html5/pom-parent.xml
-$ cd helloworld-html5
-$ vi pom.xml
-# 28行目の<relativePath>を親からコピーしたpom.xmlを指すように編集する
-'-: <relativePath>../pom.xml</relativePath>
-'+: <relativePath>pom-parent.xml</relativePath>
-# ビルド (`mvn install`でもよい)
+どこか適当なディレクトリに移動しておき、helloworld-html5のみをコピーする  
+$ cp -r $QUICKSTART_HOME/helloworld-html5 .  
+親ディレクトリにあるpom.xmlも必要になるので別名にしてコピーしておく  
+$ cp $QUICKSTART_HOME/pom.xml helloworld-html5/pom-parent.xml  
+$ cd helloworld-html5  
+$ vi pom.xml  
+28行目の<relativePath>を親からコピーしたpom.xmlを指すように編集する  
+'-: <relativePath>../pom.xml</relativePath>  
+'+: <relativePath>pom-parent.xml</relativePath>  
+ ビルド (`mvn install`でもよい)  
 $ mvn package
 # デプロイ (すでにEAPを起動済みであること)
 $ mvn wildfly:deploy
