@@ -27,7 +27,7 @@ $ git commit -m 'first commit'
 $ git branch -M main
 $ git remote add origin git@github.com:<自分のアカウント名>/helloworld-html5.git
 $ git push -u origin main
-GitHubのjboss-container-images/jboss-eap-openshift-templatesにEAPの公式
+# GitHubのjboss-container-images/jboss-eap-openshift-templatesにEAPの公式
 ImageStreamとTemplateがあるのでそれを現在のプロジェクトに導入する。
 $ oc apply -f https://raw.githubusercontent.com/jboss-container-images/jboss-eap-openshift-templates/eap74/eap74-openjdk17-image-stream.json
 imagestream.image.openshift.io/jboss-eap74-openjdk17-openshift created
@@ -50,8 +50,7 @@ eap74-amq-s2i An example JBoss Enterprise Application Platform application using
 eap74-basic-s2i An example JBoss Enterprise Application Platform application. For more inform... 20 (5 blank) 8
 eap74-https-s2i An example JBoss Enterprise Application Platform application configured with... 30 (11 blank) 10
 eap74-sso-s2i An example JBoss Enterprise Application Platform application Single Sign-On a... 50 (21 blank) 10
-これらは openshift 名前空間にすでに存在することもあるが古かったりするので独自
-に取得する。また自分の名前空間に置くことで直接編集することもできる。
+# これらは openshift 名前空間にすでに存在することもあるが古かったりするので独自に取得する。また自分の名前空間に置くことで直接編集することもできる。
 oc nw-appコマンドによるビルドとデプロイ
 GitHubのリポジトリのアカウント名は適宜読み替えること。
 $ oc new-app --template=eap74-basic-s2i \
